@@ -3,6 +3,35 @@ Jack Resources
 
 Contained here are resources for the nand2tetris "Jack" programming language.
 
+
+
+Warning!
+--------
+
+For DOOM users, add the following Elisp to your `.config` file:
+
+ 
+``` emacs-lisp
+
+;; nand2tetris config for jack
+(use-package! jack-mode
+  :init
+  (setq jack-tools-directory (concat nand2tetris-core-base-dir "/tools/"))
+  (setq jack-build-directory "~/.emacs.d/.local/straight/jack-mode/libraries")
+
+
+  )
+
+(add-to-list 'auto-mode-alist '("\\.jack\\'" . jack-mode))
+
+```
+Optionally, configure this to run after any similar libraries, as required. 
+
+
+
+
+
+
 Features
 --------
 
